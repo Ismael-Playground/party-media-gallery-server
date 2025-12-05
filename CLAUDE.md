@@ -217,10 +217,15 @@ ALGOLIA_API_KEY=...
 
 Este proyecto utiliza un sistema de agentes Claude especializados para desarrollo autonomo.
 
-**Documentacion:**
-- `.claude/ORCHESTRATION.md` - Sistema de orquestacion
-- `.claude/IMPLEMENTATION_PLAN.md` - Plan de implementacion
-- `.claude/README.md` - Guia rapida
+**Documentacion Centralizada:**
+- `../party-media-gallery-docs/agents/ORCHESTRATION.md` - Sistema de orquestacion
+- `../party-media-gallery-docs/PROJECT_ROADMAP.md` - Roadmap maestro (377 tickets)
+- `../party-media-gallery-docs/README.md` - Hub de documentacion
+
+**Symlinks locales (para compatibilidad):**
+- `.claude/ORCHESTRATION.md` → docs/agents/ORCHESTRATION.md
+- `.claude/IMPLEMENTATION_PLAN.md` → docs/PROJECT_ROADMAP.md
+- `.claude/agents/` → docs/agents/server/
 
 **Auto-Routing de Tareas:**
 
@@ -243,16 +248,6 @@ Este proyecto utiliza un sistema de agentes Claude especializados para desarroll
 | Comando | Descripcion |
 |---------|-------------|
 | `/ticket` | Crear ticket estructurado para agentes |
-
-**Flujo de Trabajo:**
-```
-1. /ticket genera estructura
-2. Issue creado en GitHub y asignado al proyecto
-3. Agentes de desarrollo implementan
-4. Agentes de testing validan
-5. Agentes de calidad revisan
-6. Merge a develop
-```
 
 **GitHub Project:**
 - URL: https://github.com/orgs/Ismael-Playground/projects/2

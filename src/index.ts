@@ -15,6 +15,8 @@ import { rateLimiter } from './middleware/rateLimiter.js';
 import { healthRouter } from './routes/health.js';
 import { authRouter } from './routes/auth/index.js';
 import { usersRouter } from './routes/users/index.js';
+import { partiesRouter } from './routes/parties/index.js';
+import { mediaRouter } from './routes/media/index.js';
 
 const app: Express = express();
 const httpServer = createServer(app);
@@ -40,6 +42,8 @@ app.use(rateLimiter);
 app.use('/health', healthRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', usersRouter);
+app.use('/api/v1/parties', partiesRouter);
+app.use('/api/v1/media', mediaRouter);
 
 // 404 handler
 app.use((_req: Request, res: Response) => {
